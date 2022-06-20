@@ -7,6 +7,7 @@ import '../widgets/shared/menu.widgets.dart';
 import '../widgets/tasks/articles.item.widget.dart';
 import 'burgerList.pages.dart';
 import 'delayed.pages.dart';
+import 'listArticle.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,48 +30,10 @@ class _HomePageState extends State<HomePage>{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height:20),
-              //zone de recherche
               DelayedAnimation(
-                  delay: 750,
-                  child: Card(
-                    elevation: 10,
-                    margin: EdgeInsets.symmetric(horizontal: 30),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15)
-                    ),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          labelText: "Entrez le produit que vous voulez",
-                          suffixIcon: Icon(Icons.search),
-                          contentPadding: EdgeInsets.only(left: 20)
-                      ),
-                    ),
-                  ),
-              ),
-              SizedBox(height:20),
-
-              //list de categorie
-              DelayedAnimation(
-                  delay: 850,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                          margin: EdgeInsets.only(bottom: 20.0, top: 34.0),
-                          child: Image(image: AssetImage("assets/images/logo.jpg"))),
-                      Expanded(child: ListView.builder(
-                        itemCount: tasks.length,
-                        itemBuilder: (context,index){
-                          return ArticlesItem(articlesModel: tasks[index],);
-                        },
-                      ))
-                    ],
-                  ),
+                  child: listArticle(),
+                  delay: 950
               )
-
-
               ],
             ),
           ),

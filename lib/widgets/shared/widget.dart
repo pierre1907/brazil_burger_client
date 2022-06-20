@@ -16,7 +16,8 @@ AppBar appBar({required String title}){
           icon: Icon(
               Icons.shopping_cart,
               color: Colors.black
-          )),
+          )
+      ),
       IconButton(
           onPressed: null,
           icon: Icon(

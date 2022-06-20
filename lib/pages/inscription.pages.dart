@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'delayed.pages.dart';
 import 'home.pages.dart';
+import 'listArticle.dart';
 
 class InscriptionPage extends StatefulWidget {
   const InscriptionPage({Key? key}) : super(key: key);
@@ -48,7 +49,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                               fontWeight: FontWeight.w600)
                       ),
                     ),
-                    SizedBox(height: 22),
+                    SizedBox(height: 10),
                     DelayedAnimation(
                       delay: 2000,
                       child: Text(
@@ -60,15 +61,13 @@ class _InscriptionPageState extends State<InscriptionPage> {
                               fontWeight: FontWeight.w600)
                       ),
                     ),
-
-
                   ],
                 ),
               ),
               registerForm(),
-              SizedBox(height: 35),
+              SizedBox(height: 5),
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(20.0),
                 child: DelayedAnimation(
                   delay: 4000,
                   child: Container(
@@ -79,12 +78,12 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         shadowColor: Colors.yellowAccent,
                         shape: StadiumBorder(),
                         padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                      ),
+                       ),
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => PrincipalePage(),
+                            builder: (context) => listArticle(),
                           ),
                         );
                       },
@@ -99,9 +98,9 @@ class _InscriptionPageState extends State<InscriptionPage> {
                 ),
               ),
 
-              SizedBox(height: 20),
+              //SizedBox(height: 5),
               Container(
-                padding: EdgeInsets.only(top:15.0, bottom: 20.0),
+                padding: EdgeInsets.all(20.0),
                 child: DelayedAnimation(
                   delay: 4500,
                   child: Container(
@@ -117,7 +116,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => listArticle(),
                           ),
                         );
                       },

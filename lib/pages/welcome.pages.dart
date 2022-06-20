@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'home.pages.dart';
+import 'listArticle.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -26,7 +27,6 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
           child: Column(
             children: [
-
               //Partie Logo
               Container(
                 padding: EdgeInsets.all(50.0),
@@ -67,7 +67,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Container(
                 padding: EdgeInsets.all(5.0),
                 child: DelayedAnimation(
-                  delay: 4500,
+                  delay: 3500,
                   child: Container(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -100,7 +100,7 @@ class _WelcomePageState extends State<WelcomePage> {
               Container(
                 padding: EdgeInsets.only(top:15.0, bottom: 20.0),
                 child: DelayedAnimation(
-                  delay: 4500,
+                  delay: 4000,
                   child: Container(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -148,11 +148,10 @@ class _WelcomePageState extends State<WelcomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => listArticle(),
                           ),
                         );
                       },
-
                       child: Text(
                           "Passer",
                           style: TextStyle(
@@ -164,7 +163,6 @@ class _WelcomePageState extends State<WelcomePage> {
 
                 ),
               )
-
             ],
           ),
         ),

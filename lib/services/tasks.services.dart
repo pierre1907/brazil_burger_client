@@ -4,13 +4,17 @@ import 'package:flutter/material.dart';
 
 import '../models/tasks.models.dart';
 import '../pages/commandes.pages.dart';
-import '../pages/home.pages.dart';
+import '../pages/listArticle.dart';
 
 
 class Services {
   static List getMenu() {
     return [
-      {"title": "Accueil", "icon": Icons.home, "page": HomePage()},
+      {
+        "title": "Accueil",
+        "icon": Icons.home,
+        "page": listArticle()
+      },
       {
         "title": "Suivre ses commandes",
         "icon": Icons.shopping_cart,
@@ -34,7 +38,7 @@ class Services {
   static List<TaskModel> getTasks() {
     return [
       TaskModel(
-          titre: "Burger 1", description: "C'est le burger 1", prix: 2500),
+          titre: "Burger 1", description: "C'est le burger 1", prix: 2500, image: "burger.png"),
     ];
   }
 

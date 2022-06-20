@@ -1,4 +1,4 @@
-#Fri Apr 29 14:47:35 UTC 2022
+#Wed Jun 01 01:00:56 UTC 2022
 base.0=C\:\\Users\\user\\Desktop\\L3 GLRS\\projet Angular-flutter\\brazil_burger_client\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

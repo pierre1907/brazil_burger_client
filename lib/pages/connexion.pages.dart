@@ -4,6 +4,7 @@ import 'package:brazil_burger_client/pages/principal.pages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/shared/widget.dart';
+import 'listArticle.dart';
 
 
 
@@ -88,7 +89,7 @@ class _connexionPageState extends State<connexionPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                        builder: (context) => PrincipalePage(),
+                        builder: (context) => listArticle(),
                     ),
                     );
                   },
@@ -112,16 +113,16 @@ class _connexionPageState extends State<connexionPage> {
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.yellow,
-                    shadowColor: Colors.yellowAccent,
+                    primary: Colors.transparent,
+                    shadowColor: Colors.transparent,
                     shape: StadiumBorder(),
-                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                    padding: EdgeInsets.all(15.0),
                   ),
                   onPressed: (){
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(),
+                        builder: (context) => listArticle(),
                       ),
                     );
                   },
